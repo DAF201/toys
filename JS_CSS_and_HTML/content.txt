@@ -1,6 +1,0 @@
-username:{
-    NotAStatement
-}
-password:{
-    0429
-}

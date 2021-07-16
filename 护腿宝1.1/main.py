@@ -34,7 +34,7 @@ def main():
                 counter=+1
                 print("护腿宝为您服务，当前次数：%s"%counter)
                 print("当前时间：%s"%datetime.now())
-                print("护腿地点：%s"%old_record)
+                print("护腿地点：av%s"%old_record)
                 print("剩余硬币数量：%s"%coin_record)
                 print(" ")
                 time.sleep(900)

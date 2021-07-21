@@ -319,6 +319,4 @@ def main():
             print("no new video found, sleeping...")
             time.sleep(900)
 
-
-if __name__ == "__main__":
-    main()
+main()

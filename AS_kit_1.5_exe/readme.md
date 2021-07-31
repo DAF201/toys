@@ -9,7 +9,7 @@ How to use：
 7. download
 8. unrar
 9. click and run
-
+__
 1. 下载图片
 2. 改为.rar
 3. 解压

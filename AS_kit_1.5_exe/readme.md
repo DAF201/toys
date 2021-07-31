@@ -10,7 +10,7 @@ How to use：
 8. unrar
 9. click and run
 
-(___)
+___
 
 1. 下载图片
 2. 改为.rar

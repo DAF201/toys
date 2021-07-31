@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #e07f00;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #5c4e4e;
+    }
+
+    article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px;
+        /* only for demonstration, should be removed */
+    }
+
+    h2 {
+        color: white
+    }
+
+    p {
+        color: white;
+        size: 100px;
+    }
+</style>
+
+<head>
+    <title id=webtitle>JTD-200</title>
+</head>
+
+<body style="background-color: rgb(0, 0, 0);">
+    <h1 id=h1 style="color: white;">JTD-200 on HASS installing guide</h1>
+    <ul id=ul>
+        <li><a href="https://jtechdigital.com/">Home</a></li>
+        <li><a href="https://jtechdigital.com/articles/?category_name=news">News</a></li>
+        <li><a href="https://jtechdigital.com/contact/">Contact</a></li>
+        <li><a href="https://jtechdigital.com/shop">Products</a></li>
+        <li><a href="https://jtechdigital.com/jobs/">Career</a></li>
+        <li style="float: right;"><a href="https://www.facebook.com/J.Tech.Digital/">Facebook</a></li>
+        <li style="float: right;"><a href="https://twitter.com/JTechDigitalInc">Twitter</a></li>
+        <li style="float: right;"><a href="https://www.youtube.com/user/JTechDigitalINC">Youtube</a></li>
+        <li style="float: right;"><a href="https://www.instagram.com/jtechdigitalusa/">Instagram</a></li>
+        <li style="float: right;"><a href="https://www.linkedin.com/company/j-tech-digital-inc/">Linkedin</a></li>
+        <li id=git style="float: right;display:none;"><a href="https://github.com/DAF201/toys"
+                style="color: #e07f00;">free github toys</a></li>
+        <li id=red style="float:right;size: 1px;" onmouseover=hide_some()><a
+                href="https://www.bilibili.com/video/BV1PN411X7QW" style="size:1px;">Nothing here</a></li>
+    </ul>
+    <br>
+    <h1 id=h style="color: white;">JTD-200</h1>
+    <p id=title style="color: white;">Enter your device"s ip address to continus</p>
+    <input id="input" type="text" placeholder="something like 192.168.1.1 or so" style="width: 200px;height: 16px;">
+    <button id="button1" onclick=hide()>continus</button>
+
+    <article id=article style="background-color: black;display: none;">
+        <h2>JTD-200 on home assistant</h2>
+        <a href="http://homeassistant.local:8123/" target="_blank" style="color: white;text-decoration: none">1. Go to
+            your homeassistant
+            page to download the intergrations needed (this is portal)</a>
+        <p style="margin-left: 40px;">Firstly, you need to make sure you have the HACS installed and set correctly</p>
+        <a href="https://hacs.xyz/docs/installation/prerequisites"
+            style="color: white;margin-left: 40px;text-decoration: none;" target="_blank">portal ready !</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>2. Go to the HACS, click on "Custom repositories" and enter"https://github.com/DAF201/Hass_test", select
+            intergration</p>
+        <img src="../source/shdksahfsa.png" style="width: 1800px;">
+        <img src="../source/skaflskada4.png" style="width: 1800px;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="http://homeassistant.local:8123/hassio/addon/a0d7b954_vscode/info" target="_blank"
+            style="color: white;text-decoration: none">
+            3. Then, go to the SuperVisor,add on store, install VS code (this is portal)</a>
+        <p>install VS code, open it. Find configueatio.yaml in files</p>
+        <img src="../source/asdfasf.png" style="width: 1800px;">
+        <p> add the configer values in</p>
+        <img src="../source/lkjassdjf.png" style="width: 1800px;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <button id=generate onclick=generate()>generate your values from your input</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>4. Add script to your hass</p>
+        <p>go to your script page</p>
+        <br>
+        <button onclick="location.href='http://homeassistant.local:8123/config/script/dashboard'">portal</button>
+        <br>
+        <p>Add a script as following</p>
+        <br>
+        <img src="../source/asdasdf.png" style="width: 1800px;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>5. Go back to the homepage, add a card to the homepage by following steps</p>
+        <img src="../source/asdfasdfasdf.png" style="width: 1800px;">
+        <img src="../source/asdjhfaksdfhkj.png" style="width: 1800px;">
+        <img src="../source/iufhrihsfsdh.png" style="width: 1800px;">
+        <img src="../source/jfghjghfgjfgfj.png" style="width: 1800px;">
+        <img src="../source/tjmhsfbsdf.png" style="width: 1800px;">
+        <img src="../source/querguwghwh.png" style="width: 1800px;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>6. And you have a card to control your JTD-200 now</p>
+        <p> You can preview by click on camera or open/close stream by toggle</p>
+        <p>(This box is not power on currently)</p>
+        <img src="../source/ajfhkashfksahdo.png" style="width: 1800px;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <button onclick=show_hidden()>click to show hidden things</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p id=hidden_element1></p>
+        <p id=hidden_element2></p>
+        <p id=hidden_element3></p>
+        <br>
+        <a id=hidden_element4 href="https://github.com/DAF201/Hass_test"
+            style="color: white;text-decoration: none; display: none;" target="_blank">port to github</a>
+        <br>
+        <br>
+        <br>
+        <br>
+    </article>
+
+    <video controls playsinline autoplay muted loop width="1880" height="950" id="video"
+        style="display:none;position: absolute;text-align: center;display: none;">
+        <source src="../source/ashfdkasdjfha.mp4" type="video/mp4">
+    </video>
+
+</body>
+<script>
+    var lis = document;
+    lis.addEventListener("keyup",
+        function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("button1").click();
+            }
+        }
+    )
+    function hide() {
+        var input_value = document.getElementById("input").value
+        if (input_value == ("having a good time?")) {
+            document.getElementById("webtitle").innerHTML = "Move on !"
+            document.getElementById("h").style.display = "none"
+            document.getElementById("ul").style.display = "none"
+            document.getElementById("red").style.display = "none"
+            document.getElementById("h1").style.display = "none"
+            document.getElementById("title").style.display = "none"
+            document.getElementById("button1").style.display = "none"
+            document.getElementById("input").style.display = "none"
+            alert("welcome back home")
+            document.getElementById("video").style.display = "block"
+        } else {
+            if (input_value !== "") {
+                document.getElementById("red").style.display = "none"
+                document.getElementById("title").style.display = "none"
+                document.getElementById("button1").style.display = "none"
+                document.getElementById("input").style.display = "none"
+                document.getElementById("article").style.display = "block"
+            } else {
+                alert("please enter something")
+            }
+
+        }
+
+    }
+    function hide_some() {
+        document.getElementById("red").style.display = "none"
+        document.getElementById("git").style.display = "block"
+    }
+    function generate() {
+        var input_value = document.getElementById("input").value
+        var value1 = "camera:"
+        var value2 = "  - platform: e_cam"
+        var value31 = "    stream_source: rtmp://"
+        var value32 = "/live/0"
+        var value4 = "    host: "
+        var value5 = "switch:"
+        var value6 = "- platform: e_cam"
+        var value7 = "host:"
+        var value8 = "name: 'e_switch' #change to what ever name you want"
+        var value9 = "port: '80'"
+        alert("there are two parts, this is the first part")
+        alert("first line:")
+        alert(value1)
+        alert("second line:")
+        alert(value2)
+        alert("third line:")
+        alert(value31)
+        alert(input_value)
+        alert(value32)
+        alert("last line:")
+        alert(value4)
+        alert(input_value)
+        alert("second part")
+        alert("first line:")
+        alert(value5)
+        alert("second line:")
+        alert(value6)
+        alert("third line:")
+        alert(value7)
+        alert(input_value)
+        alert("fourth line:")
+        alert(value8)
+        alert("fifth line:")
+        alert(value9)
+        alert("sixth line(optional)")
+        alert("username: #enter your username here if you have #default is admin")
+        alert("seventh line:")
+        alert("password: #enter your password here if you have #default is admin")
+    }
+    function show_hidden() {
+        document.getElementById("hidden_element1").innerHTML = "Trust me, for other complex setting or control, go straight to device home page by entering you device IP will be much easier than using home assistant configuration.yaml"
+        document.getElementById("hidden_element2").innerHTML = "The meaning of technology is to make life easier not 'this is so cool even it is freaking complex and will make thing harder'"
+        document.getElementById("hidden_element3").innerHTML = "Anyway, it is still you right to what you want, I left the code here. You can change it to the way you want"
+        document.getElementById("hidden_element4").style.display = 'block'
+    }
+</script>
+
+</html>

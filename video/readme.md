@@ -1,4 +1,4 @@
-My thank to https://github.com/RimoChan
+My thank to @RimoChan
 required package: RimoChan/kill3d
 
      pip install git+https://github.com/RimoChan/kill3d.git

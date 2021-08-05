@@ -10,3 +10,5 @@ required package: RimoChan/kill3d
   Esc : escape from cameramode
   
   Ctrl + C : stop
+
+(main is multi-threading,test is multi-processing, I feel like multiprocessing works better)

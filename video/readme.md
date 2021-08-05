@@ -13,4 +13,5 @@ required package: RimoChan/kill3d
 
 (main is multi-threading,test is multi-processing, I feel like multiprocessing is just overall better)
 
-<h>Will look like this</n>
+<h>Will look like this</h>
+<img src='https://github.com/DAF201/toys/blob/main/video/11.23140287399292.png'>

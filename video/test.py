@@ -12,6 +12,7 @@ THIS_PATH = os.getcwd()
 START_TIME = time.time()
 WINDOW_NAME = 'man in mirror'
 
+
 def window_capture() -> None:
     myScreenshot = pyautogui.screenshot()
     myScreenshot.save(THIS_PATH+'\\'+r'%s.png' % str(time.time()-START_TIME))
@@ -20,6 +21,8 @@ def window_capture() -> None:
 def video_cap() -> None:
     cap = cv2.VideoCapture(0)
     cv2.namedWindow(WINDOW_NAME, cv2.WINDOW_NORMAL)
+    cv2.setWindowProperty(
+        WINDOW_NAME, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
     while True:
         ret, img = cap.read()
         img = cv2.flip(img, 1)
@@ -50,9 +53,10 @@ def fetch_image() -> None:
     grab_image = ImageGrab.grab((x1, y1, x2, y2))
     grab_image.save(THIS_PATH+'\\'+r'%s.png' % str(time.time()-START_TIME))
 
+
 if __name__ == '__main__':
-    p1=Process(target=video_cap,args=())
-    p2=Process(target=scan.scan,args=())
+    p1 = Process(target=video_cap, args=())
+    p2 = Process(target=scan.scan, args=())
     p1.start()
     p2.start()
     p1.join()

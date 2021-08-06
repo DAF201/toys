@@ -1,8 +1,8 @@
 import cv2
 from PIL import Image
 import numpy
-covered = cv2.imread(r"C:\Users\work_space\python\toys\video\poker_face.png", cv2.IMREAD_UNCHANGED)#front
-background = cv2.imread(r"C:\Users\work_space\python\toys\video\Screenshot (261).jpg")#back
+covered = cv2.imread(r"front_cover's_path", cv2.IMREAD_UNCHANGED)#front
+background = cv2.imread(r"back_ground's_path")#back
 b, g, r, a = cv2.split(covered)
 foreground = cv2.merge((b, g, r))
 alpha = cv2.merge((a, a, a))

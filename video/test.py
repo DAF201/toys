@@ -27,6 +27,7 @@ def video_cap() -> None:
         ret, img = cap.read()
         img = cv2.flip(img, 1)
         cv2.imshow(WINDOW_NAME, img)
+        pyautogui.click(10, 10)
         k = cv2.waitKey(1)
         if k == 27:
             exit()

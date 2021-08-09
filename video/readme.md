@@ -5,11 +5,9 @@ https://github.com/RimoChan
 required package: RimoChan/kill3d
 
      pip install git+https://github.com/RimoChan/kill3d.git
-  go to the folder, enter "python main.py" or "python test.py" <-- I prefer this one
+  go to the folder, enter "python main.py"
   
-  Ctrl + z : camera screenshot
-  
-  Ctrl + x : full screen screenshot
+  Ctrl + z : camera screenshot(camera)
   
   Esc : escape from cameramode
   

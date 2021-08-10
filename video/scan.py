@@ -2,24 +2,21 @@ import os
 import time
 import math
 import threading
-
 import glfw
 import PyFaceDet
 import numpy as np
 from OpenGL.GL import *
 from OpenGL.GLU import *
-
 from kill3d import 窗口
-
 from rimo_utils import 计时, cv0, matrix
 
 线程数 = 3
 最低信念 = 65
-
-
 人脸座标 = []
-lock=threading.Lock()
-def scan():
+lock = threading.Lock()
+
+
+def scan(result):
     def 人脸检测(img):
         偷懒 = 3
         w, h = img.shape[:2]
@@ -34,7 +31,6 @@ def scan():
             if 信念 < 最低信念:
                 continue
             yield np.array([y, y+h, x, x+w])*偷懒
-
 
     def 循环人脸座标():
         def g():
@@ -51,10 +47,8 @@ def scan():
         for _ in range(线程数):
             threading.Thread(target=g, daemon=True).start()
 
-
     此處 = os.path.abspath(os.path.dirname(__file__))
-    图 = cv0.read(f'{此處}/poker_face.png')
-
+    图 = cv0.read(f'{此處}'+'%s' % result)
 
     def 生成opengl纹理(npdata):
         w, h, 通道数 = npdata.shape
@@ -68,14 +62,13 @@ def scan():
         glBindTexture(GL_TEXTURE_2D, 纹理编号)
         if 通道数 == 3:
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width,
-                        height, 0, GL_BGR, GL_UNSIGNED_BYTE, 纹理)
+                         height, 0, GL_BGR, GL_UNSIGNED_BYTE, 纹理)
         if 通道数 == 4:
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width,
-                        height, 0, GL_BGRA, GL_UNSIGNED_BYTE, 纹理)
+                         height, 0, GL_BGRA, GL_UNSIGNED_BYTE, 纹理)
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)
 
         return 纹理编号, 纹理座标
-
 
     def 新建窗口(尺寸, 标题='Your mask'):
         glfw.window_hint(glfw.TRANSPARENT_FRAMEBUFFER, True)
@@ -91,13 +84,11 @@ def scan():
         纹理编号, 纹理座标 = 生成opengl纹理(图)
         return window, 纹理编号, 纹理座标
 
-
     glfw.init()
     循环人脸座标()
 
     莉沫大军 = []
     莉沫大军.append(新建窗口([300, 300]))
-
 
     def 画图(纹理编号, 纹理座标):
         glClear(GL_COLOR_BUFFER_BIT)
@@ -107,10 +98,10 @@ def scan():
         c = d = 1
         q, w = 纹理座标
         [[p1, p2],
-        [p4, p3]] = np.array([
-            [[a, b, 0, 1, 0, 0], [a, d, 0, 1, w, 0]],
-            [[c, b, 0, 1, 0, q], [c, d, 0, 1, w, q]],
-        ])
+         [p4, p3]] = np.array([
+             [[a, b, 0, 1, 0, 0], [a, d, 0, 1, w, 0]],
+             [[c, b, 0, 1, 0, q], [c, d, 0, 1, w, q]],
+         ])
         t = matrix.rotate_ax(-math.pi/2, axis=(0, 1))
         glBegin(GL_QUADS)
         for p in [p1, p2, p3, p4]:
@@ -118,7 +109,6 @@ def scan():
             glVertex4f(*(p[:4]@t))
         glEnd()
         glfw.swap_buffers(window)
-
 
     def 定位(window, p):
         x = p[3]-p[2]

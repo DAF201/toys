@@ -1,4 +1,4 @@
-My thank to @RimoChan
+thank to @RimoChan
 
 https://github.com/RimoChan
 

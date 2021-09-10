@@ -3,8 +3,10 @@
 
 
 # 为什么有些地方看起来这么傻逼呢？因为我写完了以后才发现阿B评论上限1000，而好死不死得我又是条懒狗不想改太多了
+#why does it looks so stupid somewhere? because I realized there is a word limit of comments after I finished, and I just don't want to change the whole.
 
-#Banned by bilibili, nothing will be sent.
+#update:
+#Banned by bilibili, nothing will be sent out. Other users will not see the content you sent, even the server replies you with a status code 0.
 
 
 import requests

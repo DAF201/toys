@@ -4,7 +4,7 @@
 
 # 为什么有些地方看起来这么傻逼呢？因为我写完了以后才发现阿B评论上限1000，而好死不死得我又是条懒狗不想改太多了
 
-
+#Banned by bilibili, nothing will be sent.
 
 
 import requests

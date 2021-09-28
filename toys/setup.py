@@ -10,7 +10,6 @@ setuptools.setup(
     version='1.0',
     author='DAF201',
     description='a test',
-    url='https://github.com/DAF201',
     packages=[],
     python_requires='>=3.5',
 )

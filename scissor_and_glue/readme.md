@@ -1,6 +1,6 @@
 put the input image in the same folder as the scissor, there is an example input
 
-any name works as long as file is .png
+any name works as long as file is .jpg
 
 1 test.png
 

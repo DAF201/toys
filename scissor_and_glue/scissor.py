@@ -2,7 +2,7 @@ import numpy
 import random
 from PIL import Image
 import pathlib
-def latest_file(path: pathlib.Path, pattern: str = "*.png"):
+def latest_file(path: pathlib.Path, pattern: str = "*.jpg"):
     files = path.glob(pattern)
     return max(files, key=lambda x: x.stat().st_ctime)
 try:

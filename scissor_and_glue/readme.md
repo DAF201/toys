@@ -10,7 +10,7 @@ any name works as long as file is .png
 
 <img src='https://github.com/DAF201/toys/blob/main/scissor_and_glue/src/Screenshot%20(478).png'>
 
-merge back to 1 picture
+merge back to 1 merged.png
 
 <img src='https://github.com/DAF201/toys/blob/main/scissor_and_glue/src/Screenshot%20(481).png'>
 

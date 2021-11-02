@@ -1,6 +1,6 @@
 this is the input folder for glue
 
-file name:
+files name:
 
 part1.png
 
